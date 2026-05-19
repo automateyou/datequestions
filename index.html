@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>365 Questions for Deeper Love — The Connection Year</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #f6efe4;
+  --cream-deep: #ede2cf;
+  --paper: #fbf6ec;
+  --ink: #2a1a14;
+  --ink-soft: #5a3f33;
+  --burgundy: #7a2331;
+  --burgundy-deep: #5a161f;
+  --blush: #e8b8a8;
+  --rust: #c25a3a;
+  --gold: #b8893a;
+  --shadow: rgba(122, 35, 49, 0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Subtle paper grain over everything */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(122,35,49,0.04), transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(184,137,58,0.05), transparent 45%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: multiply;
+}
+
+.container { position: relative; z-index: 3; }
+
+/* ==================== NAV ==================== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(246, 239, 228, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(42, 26, 20, 0.08);
+}
+
+.logo {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+  color: var(--burgundy);
+}
+
+.logo span {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--rust);
+  margin: 0 0.4rem;
+  vertical-align: middle;
+}
+
+.nav-cta {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 0.7rem 1.4rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+}
+.nav-cta:hover { background: var(--burgundy); transform: translateY(-1px); }
+
+/* ==================== HERO ==================== */
+.hero {
+  min-height: 100vh;
+  padding: 8rem 3rem 4rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+}
+
+.hero-text { position: relative; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 2.5rem;
+  height: 1px;
+  background: var(--burgundy);
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--burgundy);
+  font-weight: 300;
+}
+
+h1 .accent {
+  font-family: 'Caveat', cursive;
+  font-style: normal;
+  color: var(--rust);
+  font-size: 0.85em;
+  font-weight: 600;
+  display: inline-block;
+  transform: rotate(-3deg);
+  margin: 0 0.2em;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 32rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.65;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.btn-primary {
+  background: var(--burgundy);
+  color: var(--cream);
+  padding: 1.1rem 2.2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 10px 30px var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--burgundy-deep);
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.btn-primary span { position: relative; z-index: 1; }
+
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(122, 35, 49, 0.25); }
+.btn-primary:hover::before { transform: translateY(0); }
+
+.btn-primary .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.btn-primary:hover .arrow { transform: translateX(4px); }
+
+.guarantee {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.guarantee::before {
+  content: '✦';
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(42, 26, 20, 0.1);
+  max-width: 30rem;
+}
+
+.meta-item .num {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  color: var(--burgundy);
+  font-weight: 500;
+  display: block;
+  line-height: 1;
+}
+
+.meta-item .label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  margin-top: 0.4rem;
+  display: block;
+}
+
+/* ==================== BOOK MOCKUP ==================== */
+.book-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 2000px;
+  min-height: 600px;
+}
+
+.book-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(194, 90, 58, 0.18), transparent 65%);
+  filter: blur(30px);
+  border-radius: 50%;
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+.book {
+  position: relative;
+  width: 320px;
+  height: 460px;
+  transform-style: preserve-3d;
+  transform: rotateY(-22deg) rotateX(8deg) rotateZ(-3deg);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: float 7s ease-in-out infinite;
+}
+
+.book:hover {
+  transform: rotateY(-12deg) rotateX(4deg) rotateZ(-1deg) scale(1.03);
+}
+
+@keyframes float {
+  0%, 100% { transform: rotateY(-22deg) rotateX(8deg) rotateZ(-3deg) translateY(0); }
+  50% { transform: rotateY(-22deg) rotateX(8deg) rotateZ(-3deg) translateY(-12px); }
+}
+
+.book-cover {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #8a2738 0%, #5a161f 100%);
+  border-radius: 4px 12px 12px 4px;
+  box-shadow:
+    -2px 0 0 rgba(0,0,0,0.2),
+    0 30px 60px rgba(0,0,0,0.35),
+    0 15px 30px rgba(122, 35, 49, 0.3);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.book-cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.15;
+  mix-blend-mode: overlay;
+}
+
+.book-cover::after {
+  content: '';
+  position: absolute;
+  top: 8px; bottom: 8px;
+  left: 6px;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, rgba(255,255,255,0.15), transparent);
+}
+
+.cover-top {
+  position: relative;
+  z-index: 2;
+  color: rgba(246, 239, 228, 0.75);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.cover-mid {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.cover-mid .number {
+  font-family: 'Fraunces', serif;
+  font-size: 5rem;
+  color: var(--cream);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+.cover-mid .label {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  color: var(--blush);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.cover-mid .title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem;
+  color: var(--cream);
+  margin-top: 1.8rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.cover-mid .title em {
+  font-style: italic;
+  color: var(--blush);
+}
+
+.cover-bottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  color: rgba(246, 239, 228, 0.7);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.ornament {
+  font-family: 'Fraunces', serif;
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+.book-spine {
+  position: absolute;
+  left: -10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(90deg, #3a0d14, #5a161f);
+  transform: rotateY(-90deg) translateZ(10px);
+  transform-origin: right;
+  border-radius: 2px 0 0 2px;
+}
+
+.book-pages {
+  position: absolute;
+  right: -8px;
+  top: 4px; bottom: 4px;
+  width: 14px;
+  background:
+    repeating-linear-gradient(180deg,
+      #f6efe4 0px,
+      #f6efe4 1px,
+      #e8dec9 1px,
+      #e8dec9 2px);
+  border-radius: 0 3px 3px 0;
+  transform: rotateY(15deg);
+  transform-origin: left;
+  box-shadow: inset -2px 0 4px rgba(0,0,0,0.1);
+}
+
+/* Floating tag */
+.book-tag {
+  position: absolute;
+  top: 8%;
+  right: -5%;
+  background: var(--cream);
+  border: 1px solid var(--ink);
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  color: var(--burgundy);
+  transform: rotate(8deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  z-index: 10;
+  animation: tag-sway 5s ease-in-out infinite;
+}
+
+@keyframes tag-sway {
+  0%, 100% { transform: rotate(8deg); }
+  50% { transform: rotate(5deg) translateY(-4px); }
+}
+
+.book-tag::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px; height: 16px;
+  background: var(--cream);
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+}
+
+.printable-sticker {
+  position: absolute;
+  bottom: 12%;
+  left: -8%;
+  background: var(--gold);
+  color: var(--paper);
+  padding: 0.6rem 1rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transform: rotate(-6deg);
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(184, 137, 58, 0.3);
+}
+
+/* ==================== SECTIONS ==================== */
+section {
+  padding: 7rem 3rem;
+  position: relative;
+}
+
+.section-eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.section-eyebrow::before {
+  content: '✦';
+  color: var(--gold);
+}
+
+h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+  max-width: 28ch;
+}
+
+h2 em {
+  font-style: italic;
+  color: var(--burgundy);
+  font-weight: 300;
+}
+
+.section-intro {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  max-width: 38rem;
+  margin-bottom: 4rem;
+  line-height: 1.65;
+}
+
+/* ==================== WHY SECTION ==================== */
+.why {
+  background: var(--paper);
+  border-top: 1px solid rgba(42, 26, 20, 0.08);
+  border-bottom: 1px solid rgba(42, 26, 20, 0.08);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.why-card {
+  padding: 2.5rem 2rem;
+  background: var(--cream);
+  border-radius: 4px;
+  border: 1px solid rgba(42, 26, 20, 0.08);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(42, 26, 20, 0.08);
+  border-color: var(--burgundy);
+}
+
+.why-card .num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: var(--burgundy);
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.why-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.01em;
+}
+
+.why-card p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==================== SAMPLE QUESTIONS ==================== */
+.questions {
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.questions-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+  margin-bottom: 4rem;
+}
+
+.questions-marquee {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.q-row {
+  display: flex;
+  gap: 1.2rem;
+  white-space: nowrap;
+  animation: scroll-left 50s linear infinite;
+}
+
+.q-row.reverse {
+  animation: scroll-right 55s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.q-card {
+  flex-shrink: 0;
+  background: var(--paper);
+  border: 1px solid rgba(42, 26, 20, 0.1);
+  padding: 1.4rem 1.8rem;
+  border-radius: 4px;
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--ink);
+  max-width: 32rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.q-card:hover {
+  border-color: var(--burgundy);
+  background: var(--cream-deep);
+}
+
+.q-card .q-num {
+  font-style: normal;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  margin-right: 0.8rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.q-card.featured {
+  background: var(--burgundy);
+  color: var(--cream);
+  border-color: var(--burgundy);
+}
+.q-card.featured .q-num { color: var(--blush); }
+
+/* ==================== INSIDE THE BOOK ==================== */
+.inside {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-deep) 100%);
+}
+
+.inside-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.chapter-list {
+  list-style: none;
+}
+
+.chapter-list li {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(42, 26, 20, 0.12);
+  display: grid;
+  grid-template-columns: 3rem 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.chapter-list li:hover {
+  padding-left: 1rem;
+  border-color: var(--burgundy);
+}
+
+.chapter-list li:first-child { border-top: 1px solid rgba(42, 26, 20, 0.12); }
+
+.ch-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--burgundy);
+  font-weight: 300;
+}
+
+.ch-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.ch-title small {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+  margin-top: 0.2rem;
+}
+
+.ch-count {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.1em;
+}
+
+/* Sample page preview */
+.page-preview {
+  background: var(--paper);
+  border-radius: 4px;
+  box-shadow:
+    0 30px 60px rgba(42, 26, 20, 0.15),
+    0 0 0 1px rgba(42, 26, 20, 0.08);
+  padding: 3rem 2.5rem;
+  position: relative;
+  transform: rotate(-1.5deg);
+  transition: transform 0.5s ease;
+  aspect-ratio: 8.5 / 11;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.page-preview:hover { transform: rotate(0deg) scale(1.02); }
+
+.page-preview::before {
+  content: '';
+  position: absolute;
+  inset: 1.5rem;
+  border: 1px solid rgba(42, 26, 20, 0.1);
+  pointer-events: none;
+}
+
+.page-header {
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(42, 26, 20, 0.15);
+}
+
+.page-day {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--burgundy);
+  margin-bottom: 0.5rem;
+}
+
+.page-q {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.page-prompt {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  line-height: 1.6;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(42, 26, 20, 0.2);
+}
+
+.page-foot {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0; right: 0;
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.page-foot .ornament-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-foot .ornament-line::before,
+.page-foot .ornament-line::after {
+  content: '';
+  width: 2rem;
+  height: 1px;
+  background: var(--ink-soft);
+}
+
+/* ==================== TESTIMONIALS ==================== */
+.testimonials {
+  background: var(--ink);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(194, 90, 58, 0.15), transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(122, 35, 49, 0.2), transparent 50%);
+}
+
+.testimonials .section-eyebrow { color: var(--blush); }
+.testimonials h2 { color: var(--cream); }
+.testimonials h2 em { color: var(--blush); }
+.testimonials .section-intro { color: rgba(246, 239, 228, 0.7); }
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.testimonial {
+  background: rgba(246, 239, 228, 0.05);
+  border: 1px solid rgba(246, 239, 228, 0.1);
+  padding: 2.5rem;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.testimonial:hover {
+  background: rgba(246, 239, 228, 0.08);
+  border-color: var(--blush);
+  transform: translateY(-4px);
+}
+
+.stars {
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+}
+
+.testimonial .quote {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.55;
+  margin-bottom: 2rem;
+  color: var(--cream);
+}
+
+.testimonial .quote::before {
+  content: '“';
+  font-size: 3rem;
+  color: var(--burgundy);
+  line-height: 0;
+  position: relative;
+  top: 0.5rem;
+  margin-right: 0.3rem;
+  font-family: 'Fraunces', serif;
+}
+
+.attrib {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(246, 239, 228, 0.1);
+}
+
+.avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--burgundy), var(--rust));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  color: var(--cream);
+}
+
+.attrib-text { font-size: 0.9rem; }
+.attrib-text strong { display: block; font-weight: 500; }
+.attrib-text small { color: rgba(246, 239, 228, 0.6); font-size: 0.8rem; }
+
+/* ==================== PRICING ==================== */
+.pricing {
+  background: var(--cream);
+  text-align: center;
+}
+
+.pricing-inner { max-width: 800px; margin: 0 auto; }
+.pricing h2 { margin-left: auto; margin-right: auto; }
+
+.pricing-card {
+  background: var(--paper);
+  border: 1px solid rgba(42, 26, 20, 0.12);
+  border-radius: 8px;
+  padding: 4rem 3rem;
+  margin-top: 4rem;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(42, 26, 20, 0.06);
+}
+
+.price-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--burgundy);
+  color: var(--cream);
+  padding: 0.5rem 1.4rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.price-old {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  color: var(--ink-soft);
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.price {
+  font-family: 'Fraunces', serif;
+  font-size: 5rem;
+  color: var(--burgundy);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.price-cents {
+  font-size: 2rem;
+  vertical-align: top;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+.price-note {
+  color: var(--ink-soft);
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+}
+
+.includes {
+  text-align: left;
+  max-width: 28rem;
+  margin: 0 auto 2.5rem;
+}
+
+.includes li {
+  list-style: none;
+  padding: 0.7rem 0;
+  display: flex;
+  align-items: start;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+  border-bottom: 1px solid rgba(42, 26, 20, 0.06);
+}
+
+.includes li::before {
+  content: '✓';
+  color: var(--burgundy);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.includes li strong { color: var(--burgundy); }
+
+.btn-massive {
+  background: var(--burgundy);
+  color: var(--cream);
+  padding: 1.4rem 3rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 15px 40px var(--shadow);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.btn-massive:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(122, 35, 49, 0.3);
+  background: var(--burgundy-deep);
+}
+
+.trust-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  flex-wrap: wrap;
+}
+
+.trust-row span { display: flex; align-items: center; gap: 0.4rem; }
+.trust-row span::before { content: '✦'; color: var(--gold); }
+
+/* ==================== FAQ ==================== */
+.faq {
+  background: var(--paper);
+}
+
+.faq-grid {
+  max-width: 800px;
+  margin: 4rem auto 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(42, 26, 20, 0.12);
+}
+
+.faq-item summary {
+  padding: 1.8rem 0;
+  font-family: 'Fraunces', serif;
+  font-size: 1.25rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: color 0.3s ease;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { color: var(--burgundy); }
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--burgundy);
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after { transform: rotate(45deg); }
+
+.faq-item p {
+  padding: 0 0 1.8rem;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 90%;
+}
+
+/* ==================== FINAL CTA ==================== */
+.final-cta {
+  background: var(--burgundy);
+  color: var(--cream);
+  text-align: center;
+  padding: 8rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(232, 184, 168, 0.15), transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(184, 137, 58, 0.1), transparent 50%);
+}
+
+.final-cta h2 {
+  color: var(--cream);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.final-cta h2 em {
+  color: var(--blush);
+}
+
+.final-cta p {
+  color: rgba(246, 239, 228, 0.85);
+  font-size: 1.15rem;
+  max-width: 38rem;
+  margin: 0 auto 3rem;
+  position: relative;
+}
+
+.final-cta .btn-massive {
+  background: var(--cream);
+  color: var(--burgundy);
+  position: relative;
+}
+
+.final-cta .btn-massive:hover {
+  background: var(--paper);
+  color: var(--burgundy-deep);
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+  background: var(--ink);
+  color: rgba(246, 239, 228, 0.6);
+  padding: 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+footer .logo { color: var(--blush); margin-bottom: 1rem; display: inline-block; }
+footer .logo span { background: var(--rust); }
+
+/* ==================== ANIMATIONS ==================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 7rem 1.5rem 4rem;
+    gap: 3rem;
+  }
+  .book-stage { min-height: 500px; }
+  section { padding: 5rem 1.5rem; }
+  .why-grid, .testimonial-grid { grid-template-columns: 1fr; }
+  .inside-grid, .questions-header { grid-template-columns: 1fr; gap: 3rem; }
+  .pricing-card { padding: 3rem 1.5rem; }
+  .price { font-size: 4rem; }
+  h2 { font-size: 2.2rem; }
+  .hero-meta { flex-wrap: wrap; gap: 1.5rem; }
+}
+
+@media (max-width: 500px) {
+  .book { width: 240px; height: 350px; }
+  .cover-mid .number { font-size: 4rem; }
+  .cover-mid .title { font-size: 1.4rem; }
+  .nav-cta { padding: 0.6rem 1rem; font-size: 0.75rem; }
+  .logo { font-size: 1.1rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ==================== NAV ==================== -->
+<nav>
+  <div class="logo">The<span></span>Connection Year</div>
+  <a href="#buy" class="nav-cta">Get the Book → $19</a>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="eyebrow reveal">A printable PDF ebook · 365 questions</div>
+    <h1 class="reveal">
+      Stop having the <em>same</em> conversations.<br>
+      Start <span class="accent">actually</span><br>
+      knowing each other.
+    </h1>
+    <p class="hero-sub reveal">
+      One question a day for a year. Designed by relationship coaches to take you past small talk and into the kind of intimacy you thought only happened in movies. Print it, fold it, leave it on the nightstand.
+    </p>
+    <div class="hero-cta-group reveal">
+      <a href="#buy" class="btn-primary">
+        <span>Get the PDF — $19</span>
+        <span class="arrow">→</span>
+      </a>
+      <div class="guarantee">30-day money-back guarantee</div>
+    </div>
+    <div class="hero-meta reveal">
+      <div class="meta-item">
+        <span class="num">365</span>
+        <span class="label">Questions</span>
+      </div>
+      <div class="meta-item">
+        <span class="num">12</span>
+        <span class="label">Themed Chapters</span>
+      </div>
+      <div class="meta-item">
+        <span class="num">PDF</span>
+        <span class="label">Print at Home</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-stage reveal">
+    <div class="book-glow"></div>
+    <div class="book-tag">Print &amp; keep forever ✿</div>
+    <div class="printable-sticker">★ Easy-print PDF</div>
+    <div class="book">
+      <div class="book-spine"></div>
+      <div class="book-pages"></div>
+      <div class="book-cover">
+        <div class="cover-top">A Year of Closer</div>
+        <div class="cover-mid">
+          <div class="number">365</div>
+          <div class="label">Questions</div>
+          <div class="title">for <em>Deeper</em><br>Dating</div>
+        </div>
+        <div class="cover-bottom">
+          <span>Vol. I</span>
+          <span class="ornament">✦</span>
+          <span>For Two</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY SECTION ==================== -->
+<section class="why">
+  <div class="section-eyebrow reveal">Why this book exists</div>
+  <h2 class="reveal">Most couples run out of things to talk about by <em>month three.</em></h2>
+  <p class="section-intro reveal">
+    Not because the love is gone — because nobody ever taught us how to ask better questions. This book is the cure for "how was your day."
+  </p>
+
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <span class="num">01</span>
+      <h3>Designed in sequence</h3>
+      <p>Questions get gently deeper week by week. By day 90, you'll be asking things you've never asked anyone — including yourself.</p>
+    </div>
+    <div class="why-card reveal">
+      <span class="num">02</span>
+      <h3>Works on any date</h3>
+      <p>First date jitters. Year-seven plateau. Long-distance video calls. The format adapts to wherever you are with whoever you're with.</p>
+    </div>
+    <div class="why-card reveal">
+      <span class="num">03</span>
+      <h3>Print &amp; keep forever</h3>
+      <p>Delivered as a clean PDF formatted for home printing. Bind it, tear out pages, leave one on a pillow. No app. No subscription. No screens.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SAMPLE QUESTIONS ==================== -->
+<section class="questions">
+  <div class="questions-header">
+    <div>
+      <div class="section-eyebrow reveal">A peek inside</div>
+      <h2 class="reveal">The kind of questions that <em>change</em> a relationship.</h2>
+    </div>
+    <p class="section-intro reveal" style="margin-bottom: 0;">
+      Not "what's your favorite color." We're talking the prompts that make someone pause, lean in, and tell you something true.
+    </p>
+  </div>
+
+  <div class="questions-marquee">
+    <div class="q-row">
+      <div class="q-card"><span class="q-num">Day 014</span>What's a compliment you've never been given but wish you had?</div>
+      <div class="q-card featured"><span class="q-num">Day 088</span>When did you last cry — and what was it really about?</div>
+      <div class="q-card"><span class="q-num">Day 142</span>What part of yourself do you hope I never see?</div>
+      <div class="q-card"><span class="q-num">Day 201</span>If we had one perfect Saturday left, what would we do?</div>
+      <div class="q-card"><span class="q-num">Day 257</span>What does your inner voice sound like when no one's listening?</div>
+      <!-- duplicate for seamless loop -->
+      <div class="q-card"><span class="q-num">Day 014</span>What's a compliment you've never been given but wish you had?</div>
+      <div class="q-card featured"><span class="q-num">Day 088</span>When did you last cry — and what was it really about?</div>
+      <div class="q-card"><span class="q-num">Day 142</span>What part of yourself do you hope I never see?</div>
+      <div class="q-card"><span class="q-num">Day 201</span>If we had one perfect Saturday left, what would we do?</div>
+      <div class="q-card"><span class="q-num">Day 257</span>What does your inner voice sound like when no one's listening?</div>
+    </div>
+    <div class="q-row reverse">
+      <div class="q-card"><span class="q-num">Day 033</span>What does love look like when nobody's watching us perform it?</div>
+      <div class="q-card"><span class="q-num">Day 119</span>Which of your parents do you fear becoming most?</div>
+      <div class="q-card featured"><span class="q-num">Day 175</span>What's something I do that you've never told me you love?</div>
+      <div class="q-card"><span class="q-num">Day 224</span>If your life were a song right now, what would it sound like?</div>
+      <div class="q-card"><span class="q-num">Day 310</span>What's the bravest thing you've never said out loud?</div>
+      <!-- duplicate -->
+      <div class="q-card"><span class="q-num">Day 033</span>What does love look like when nobody's watching us perform it?</div>
+      <div class="q-card"><span class="q-num">Day 119</span>Which of your parents do you fear becoming most?</div>
+      <div class="q-card featured"><span class="q-num">Day 175</span>What's something I do that you've never told me you love?</div>
+      <div class="q-card"><span class="q-num">Day 224</span>If your life were a song right now, what would it sound like?</div>
+      <div class="q-card"><span class="q-num">Day 310</span>What's the bravest thing you've never said out loud?</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== INSIDE THE BOOK ==================== -->
+<section class="inside">
+  <div class="inside-grid">
+    <div>
+      <div class="section-eyebrow reveal">Inside the book</div>
+      <h2 class="reveal">Twelve chapters. <em>One year.</em> A relationship transformed.</h2>
+      <p class="section-intro reveal" style="margin-bottom: 2rem;">
+        Each chapter explores a different territory of intimacy — from childhood, to fears, to fantasies, to the future.
+      </p>
+      <ol class="chapter-list reveal">
+        <li><span class="ch-num">I</span><span class="ch-title">Origins<small>Who you were before you met me</small></span><span class="ch-count">31 Qs</span></li>
+        <li><span class="ch-num">II</span><span class="ch-title">Architecture<small>How you were built and by whom</small></span><span class="ch-count">28 Qs</span></li>
+        <li><span class="ch-num">III</span><span class="ch-title">Tender Spots<small>The wounds we name to disarm them</small></span><span class="ch-count">31 Qs</span></li>
+        <li><span class="ch-num">IV</span><span class="ch-title">Desire<small>What you want and how to ask</small></span><span class="ch-count">30 Qs</span></li>
+        <li><span class="ch-num">V</span><span class="ch-title">The Body<small>Pleasure, comfort, and being seen</small></span><span class="ch-count">31 Qs</span></li>
+        <li><span class="ch-num">…</span><span class="ch-title">Plus 7 more chapters<small>Money · Conflict · Family · Future · Memory · Joy · Endings</small></span><span class="ch-count">214 Qs</span></li>
+      </ol>
+    </div>
+
+    <div class="page-preview reveal">
+      <div class="page-header">A Year of Closer · Vol. I</div>
+      <div class="page-day">Day Eighty-Eight</div>
+      <div class="page-q">When did you last cry — and what was it really about?</div>
+      <div class="page-prompt">
+        Before you answer: take a breath. There's no right way to cry. Try to look past the surface — was it the song, the headline, the missed call? Or something older underneath it?
+      </div>
+      <div class="page-foot">
+        <div class="ornament-line">✦</div>
+        <div>Chapter III · Tender Spots</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<section class="testimonials">
+  <div class="section-eyebrow reveal">Real couples, real shifts</div>
+  <h2 class="reveal">"It felt like we were <em>dating again</em> — but as the people we actually are now."</h2>
+
+  <div class="testimonial-grid">
+    <div class="testimonial reveal">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="quote">We printed it, spiral-bound it, and now do one question with our morning coffee. Six months in and I've learned more about him than in our previous two years combined.</p>
+      <div class="attrib">
+        <div class="avatar">M</div>
+        <div class="attrib-text">
+          <strong>Mara &amp; Theo</strong>
+          <small>Together 4 years · Portland</small>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial reveal">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="quote">I'm a therapist. I bought this thinking I'd find it cheesy. I was wrong. The sequencing is genuinely thoughtful and I now recommend it to clients in long-term partnerships.</p>
+      <div class="attrib">
+        <div class="avatar">D</div>
+        <div class="attrib-text">
+          <strong>Dr. Lena P.</strong>
+          <small>Couples Therapist · Brooklyn</small>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial reveal">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="quote">My partner is long-distance. We do one question per FaceTime. It's the only thing that's made the distance feel less like distance and more like a slow unraveling toward each other.</p>
+      <div class="attrib">
+        <div class="avatar">S</div>
+        <div class="attrib-text">
+          <strong>Sami K.</strong>
+          <small>Together 11 months · Berlin / NYC</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PRICING ==================== -->
+<section class="pricing" id="buy">
+  <div class="pricing-inner">
+    <div class="section-eyebrow reveal" style="justify-content: center;">Limited launch pricing</div>
+    <h2 class="reveal">A year of <em>closer</em> for less than one dinner out.</h2>
+
+    <div class="pricing-card reveal">
+      <div class="price-badge">Launch Offer — 60% Off</div>
+
+      <div class="price-row">
+        <span class="price-old">$49</span>
+        <div class="price">$19<span class="price-cents"></span></div>
+      </div>
+      <p class="price-note">One-time payment · Instant PDF download · Yours forever</p>
+
+      <ul class="includes">
+        <li><span><strong>365 sequenced questions</strong> across 12 themed chapters</span></li>
+        <li><span><strong>Print-ready PDF</strong> formatted for letter &amp; A4 paper</span></li>
+        <li><span><strong>Two layouts included</strong> — daily page format &amp; a foldable mini-book</span></li>
+        <li><span><strong>Bonus: 50 "rescue" prompts</strong> for hard conversations</span></li>
+        <li><span><strong>Lifetime access</strong> — re-download any time, free updates</span></li>
+      </ul>
+
+      <a href="#" class="btn-massive">
+        Download My Copy →
+      </a>
+
+      <div class="trust-row">
+        <span>Instant download</span>
+        <span>Secure checkout</span>
+        <span>30-day refund</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="faq">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <div class="section-eyebrow reveal">Questions before the questions</div>
+    <h2 class="reveal">Things people <em>often</em> ask.</h2>
+  </div>
+
+  <div class="faq-grid">
+    <details class="faq-item" open>
+      <summary>What format is this delivered in?</summary>
+      <p>It's a beautifully designed PDF — fully print-ready. We've formatted it to look gorgeous on both US Letter and A4 paper, so you can print at home, at a copy shop, or take it to a binder. No app, no login, no screen required once it's printed.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do I have to do exactly one a day?</summary>
+      <p>Absolutely not. Some couples do one a day with morning coffee. Others save them for weekly date nights. Some pull a random page when things feel stuck. The structure is a gift, not a rule.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Is this for new couples or long-term partners?</summary>
+      <p>Both. The book opens with lighter, getting-to-know-you questions and gradually moves into deeper territory. New couples build a foundation; long-term partners rediscover each other. Same book, different journeys.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can I print it?</summary>
+      <p>Yes — that's the whole point. The PDF is designed specifically for easy home printing. You get two layouts: a one-question-per-page format for binding, and a compact foldable format if you'd like to make a pocket-sized version.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What if I don't love it?</summary>
+      <p>30 days, no questions asked, full refund. We're confident enough in the book that we'd rather have you happy than hold onto $19.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Would this work as a gift?</summary>
+      <p>It's one of the most-given gifts we ship — for anniversaries, engagements, wedding showers, and Valentine's Day. The printed version, bound with a ribbon, looks like a small heirloom.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ==================== FINAL CTA ==================== -->
+<section class="final-cta">
+  <h2 class="reveal">One year from now, you'll know each other in ways most couples <em>never</em> will.</h2>
+  <p class="reveal">Or — you'll keep talking about the weather and your day. The book is $19. The version of your relationship on the other side of it is priceless.</p>
+  <a href="#buy" class="btn-massive reveal">
+    Get the PDF — $19 →
+  </a>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="logo">The<span></span>Connection Year</div>
+  <p>© 2026 The Connection Year · Made with care for people who actually want to be known.</p>
+</footer>
+
+</div>
+
+<script>
+// Reveal-on-scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Smooth nav hide-on-scroll-down behavior
+let lastScroll = 0;
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  const cur = window.pageYOffset;
+  if (cur > 100 && cur > lastScroll) {
+    nav.style.transform = 'translateY(-100%)';
+  } else {
+    nav.style.transform = 'translateY(0)';
+  }
+  nav.style.transition = 'transform 0.4s ease';
+  lastScroll = cur;
+});
+</script>
+
+</body>
+</html>
